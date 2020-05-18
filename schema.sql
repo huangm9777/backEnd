@@ -6,6 +6,7 @@ CREATE TABLE memory (
 	month INT,
 	day INT,
 	message TEXT,
+	message2 TEXT,
 	is_deleted INT DEFAULT 0,
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

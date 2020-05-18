@@ -19,6 +19,7 @@ function rowToObject(row){
 		month: row.month,
 		day: row.day,
 		message: row.message,
+		message2: row.message2
 	};
 
 }
@@ -35,8 +36,8 @@ app.get('/memories', (request, response) => {
 
 
 app.post('/add', (request, response) => {
-        const query = 'INSERT INTO memory(year, month, day, message) VALUES (?, ?, ?, ?)';
-        const params = [request.body.year, request.body.month, request.body.day, request.body.message];
+        const query = 'INSERT INTO memory(year, month, day, message, message2) VALUES (?, ?, ?, ?, ?)';
+        const params = [request.body.year, request.body.month, request.body.day, request.body.message, request.body.message2];
         connection.query(query, params, (error, result) => {
                 response.send({
                         ok: true,
